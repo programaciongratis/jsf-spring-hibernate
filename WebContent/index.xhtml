@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+<h1>¡Programacion Gratis!</h1>
+
+<h:form>
+
+	<h:panelGrid columns="2">
+		
+		usuario id:
+		<h:inputText id="usuarioId" value="#{clima.usuarioId}" 
+			required="true"
+			label="usuario ID" >
+		</h:inputText>
+ 
+		codigo postal : 
+		<h:inputText id="codigoPostal" value="#{clima.codigoPostal}" 
+			size="5" required="true"
+			label="Codigo Postal" >
+		</h:inputText>
+
+		temperatura : 
+		<h:inputText id="temperatura" value="#{clima.temperatura}"
+			label="Temperatura" >
+		</h:inputText>
+
+		<h:message for="temperatura" style="color:red" />
+
+	</h:panelGrid>
+	
+	<h:commandButton value="Conseguir Clima" action="#{clima.guardarClima()}" />
+
+</h:form>
+
+</body> 
+</html>

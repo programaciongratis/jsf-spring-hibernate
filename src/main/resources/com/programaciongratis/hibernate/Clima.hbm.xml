@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Generated Aug 23, 2014 11:44:54 AM by Hibernate Tools 3.4.0.CR1 -->
+
+<!-- Hibernate mapping significa que vamos a enlasar una clase con una table en la base de datos. -->
+<hibernate-mapping>
+    <class name="com.programaciongratis.objetos.Clima" table="CLIMA">
+        <id name="usuario_id" type="int">
+            <column name="USUARIO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="temperatura" type="int">
+            <column name="TEMPERATURA" />
+        </property>
+        <property name="viento" type="double">
+            <column name="VIENTO" />
+        </property>
+    </class>
+</hibernate-mapping>
